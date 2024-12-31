@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>Image Gallery</title>
     <style>
         body {
@@ -17,17 +15,19 @@
             background-size: cover;
         }
         .content {
-            padding: 50px 20px;
+            padding: 20px;
         }
         .button {
             background-color: #555;
             border: none;
             color: #f0f0f0;
-            padding: 10px 20px;
-            margin: 20px;
+            padding: 10px;
+            margin: 5px;
             cursor: pointer;
             border-radius: 4px;
             transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            width: calc(33.333% - 10px); /* Adjust width for larger screens */
         }
         .button:hover {
             background-color: #666;
@@ -37,10 +37,20 @@
             margin-top: 20px;
         }
         .image-preview img {
-            max-width: 80%;
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            .button {
+                width: calc(50% - 10px); /* Adjust width for tablets and small screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .button {
+                width: calc(100% - 10px); /* Adjust width for mobile phones */
+            }
         }
     </style>
 </head>
