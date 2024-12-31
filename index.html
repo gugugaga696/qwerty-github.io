@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Code Access</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f0f0;
+            text-align: center;
+            overflow: hidden;
+            background: url('https://i.pinimg.com/736x/00/9e/14/009e142136b6eacfefcdb13bd14b100e.jpg') no-repeat center center fixed;
+         
+            background-size: cover;
+        }
+        .content {
+            padding: 50px 20px;
+        }
+        .button {
+            background-color: #555;
+            border: none;
+            color: #f0f0f0;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: rgba(68, 68, 68, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+        .popup.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 500;
+        }
+        .error-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="content">
+        <h1>Hey love! </h1>
+        <h3>
+            Hoi, So imma keep it short, im not gonna tell you cringe stuff dont worry lol. you matter so much to me and i hope you know that, i love you so fuckin much.
+            Ik we dont talk bout our future but, yea i'd really be glad if you stay forever..but lets not give it an expiry date cause what if forver also has an end..ok fuck this
+            what i wanna say is that, i love you and im really happy to have you in my life. Hell u made my year soo good in one fuckin week, no actually 3 days..those 3 days were the best in all these fuckin 365 days.
+            if there's one person that made my year good, thats def YOU. 
+            May you have a great year ahead! and hope all your dreams come true ( dont come after me if they dint).
+            Now, imma give u a small, tiny gift. You earned these coupons for being my boyfieeeeee. 
+            so you can now redeem them by using the code xxxxxx ( text me to get the damn code hehe).
+            Anyways, ilyyyyyysfmmmmmmmm muahhhh!!!!!!!!!!!!!!
+        </h3>
+        <button class="button" onclick="showPopup()">Proceed</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Enter Referral Code</h2>
+        <input type="text" id="referralCode" placeholder="Referral Code">
+        <button class="button" onclick="checkCode()">Submit</button>
+    </div>
+
+    <div class="error-popup" id="errorPopup">
+        <p>Nah, this time ask yo wife and try again.</p>
+        <button class="button" onclick="closeErrorPopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup').classList.add('show');
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function checkCode() {
+            const referralCode = document.getElementById('referralCode').value;
+            const correctCode = 'AM69420'; // Replace with your actual referral code
+
+            if (referralCode === correctCode) {
+                window.location.href = 'images.html';
+            } else {
+                document.getElementById('errorPopup').style.display = 'block';
+            }
+        }
+
+        function closeErrorPopup() {
+            document.getElementById('errorPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

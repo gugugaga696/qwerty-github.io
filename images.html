@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f0f0;
+            text-align: center;
+            background: url('https://i.pinimg.com/736x/00/9e/14/009e142136b6eacfefcdb13bd14b100e.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .content {
+            padding: 50px 20px;
+        }
+        .button {
+            background-color: #555;
+            border: none;
+            color: #f0f0f0;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+        .image-preview {
+            margin-top: 20px;
+        }
+        .image-preview img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Here you go!</h1>
+        <h3>
+            Make use of them wisely (*smirks lmaooooo.)
+        </h3>
+        <div>
+            <button class="button" onclick="showImage('1.png')">Coupon 1</button>
+            <button class="button" onclick="showImage('2.png')">Coupon 2</button>
+            <button class="button" onclick="showImage('3.png')">Coupon 3</button>
+            <button class="button" onclick="showImage('4.png')">Coupon 4</button>
+            <button class="button" onclick="showImage('5.png')">Coupon 5</button>
+            <button class="button" onclick="showImage('6.png')">Coupon 6</button>
+            <button class="button" onclick="showImage('7.png')">Coupon 7</button>
+            <button class="button" onclick="showImage('8.png')">Coupon 8</button>
+            <button class="button" onclick="showImage('9.png')">Coupon 9</button>
+            <button class="button" onclick="showImage('10.png')">Coupon 10</button>
+            <button class="button" onclick="showImage('11.png')">Coupon 11</button>
+            <button class="button" onclick="showImage('12.png')">Coupon 12</button>
+        </div>
+        <div class="image-preview" id="imagePreview">
+            <img id="previewImage" src="" alt="Image Preview">
+        </div>
+    </div>
+
+    <script>
+        function showImage(imagePath) {
+            document.getElementById('previewImage').src = imagePath;
+        }
+    </script>
+</body>
+</html>
