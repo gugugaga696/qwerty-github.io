@@ -11,13 +11,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #f0f0f0;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Allow vertical scrolling */
             background: url('https://i.pinimg.com/736x/00/9e/14/009e142136b6eacfefcdb13bd14b100e.jpg') no-repeat center center fixed;
-         
             background-size: cover;
         }
         .content {
-            padding: 50px 20px;
+            padding: 20px;
         }
         .button {
             background-color: #555;
@@ -28,6 +27,8 @@
             cursor: pointer;
             border-radius: 4px;
             transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            width: calc(33.333% - 40px); /* Adjust width for larger screens, considering margin */
         }
         .button:hover {
             background-color: #666;
@@ -71,21 +72,31 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
         }
+        @media (max-width: 768px) {
+            .button {
+                width: calc(50% - 40px); /* Adjust width for tablets and small screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .button {
+                width: calc(100% - 40px); /* Adjust width for mobile phones */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="content" id="content">
         <h1>Hey love! </h1>
-        <P>Best viewed in PC or jus use desktop view plliss, tank ya! </P>
+        <p>Best viewed in PC or just use desktop view please, thank you!</p>
         <h3>
-            Hoi, So imma keep it short, im not gonna tell you cringe stuff dont worry lol. you matter so much to me and i hope you know that, i love you so fuckin much.
-            Ik we dont talk bout our future but, yea i'd really be glad if you stay forever..but lets not give it an expiry date cause what if forver also has an end..ok fuck this
-            what i wanna say is that, i love you and im really happy to have you in my life. Hell u made my year soo good in one fuckin week, no actually 3 days..those 3 days were the best in all these fuckin 365 days.
-            if there's one person that made my year good, thats def YOU. 
-            May you have a great year ahead! and hope all your dreams come true ( dont come after me if they dint).
-            Now, imma give u a small, tiny gift. You earned these coupons for being my boyfieeeeee. 
-            so you can now redeem them by using the code xxxxxx ( text me to get the damn code hehe).
-            Anyways, ilyyyyyysfmmmmmmmm muahhhh!!!!!!!!!!!!!!
+            Hoi, So imma keep it short, I'm not gonna tell you cringe stuff don't worry lol. You matter so much to me and I hope you know that, I love you so much.
+            I know we don't talk about our future but, yeah I'd really be glad if you stay forever..but let's not give it an expiry date because what if forever also has an end..ok forget this.
+            What I want to say is that, I love you and I'm really happy to have you in my life. Hell, you made my year so good in one week, no actually 3 days..those 3 days were the best in all these 365 days.
+            If there's one person that made my year good, that's definitely YOU. 
+            May you have a great year ahead! and hope all your dreams come true ( don't come after me if they didn't).
+            Now, I'm gonna give you a small, tiny gift. You earned these coupons for being my boyfriend.
+            So you can now redeem them by using the code xxxxxx ( text me to get the code hehe).
+            Anyways, I love you so much! Muah!!!
         </h3>
         <button class="button" onclick="showPopup()">Proceed</button>
     </div>
@@ -98,7 +109,7 @@
     </div>
 
     <div class="error-popup" id="errorPopup">
-        <p>Nah, this time ask yo wife and try again.</p>
+        <p>Nah, this time ask your wife and try again.</p>
         <button class="button" onclick="closeErrorPopup()">Close</button>
     </div>
 
